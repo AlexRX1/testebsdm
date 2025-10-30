@@ -34,7 +34,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarBSM">
       <ul class="navbar-nav gap-3 fw-semibold">
         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre nós</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quem-somos">Sobre nós</a></li>
         <li class="nav-item"><a class="nav-link" href="#premios">Premiações</a></li>
         <li class="nav-item"><a class="nav-link" href="#equipe">Nossa equipe</a></li>
         <li class="nav-item"><a class="nav-link" href="#areas">Áreas de atuação</a></li>
@@ -77,77 +77,107 @@
     </div>
   </header>
 
-  <!-- =========================================
-       SOBRE NÓS
-       ========================================= -->
-  <section id="sobre">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6 reveal">
-          <div class="ratio ratio-16x9 rounded-4 border" style="--bs-border-color: var(--gold);">
-            <!-- Imagem ilustrativa; troque por foto real do escritório -->
-            <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=1600&auto=format&fit=crop" class="rounded-4 object-fit-cover" alt="BSM Advogados">
+<section id="quem-somos" class="sobre-alt py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Colagem de imagens -->
+      <div class="col-lg-6">
+        <div class="collage">
+          <img src="img/6.jpg"           alt="Equipe BSM"              class="pic pic-1">
+          <img src="img/1.jpg"  alt="Logo na parede"          class="pic pic-2">
+          <img src="img/logoparede.jpg"     alt="Fachada do escritório"   class="pic pic-3">
+        </div>
+      </div>
+
+      <!-- Texto e métrica -->
+      <div class="col-lg-6">
+        <div class="about-copy">
+          <div class="kpi d-flex align-items-end mb-3">
+            <span class="num">10</span><span class="plus">+</span>
+            <span class="legend ms-3">anos de<br>experiência</span>
           </div>
-        </div>
-        <div class="col-lg-6 reveal">
-          <h2 class="fw-bold mb-3">Sobre <span class="gold">nós</span></h2>
-          <p class="text-secondary">
-            Somos a BSM Advogados, comprometidos com soluções jurídicas sólidas, personalizadas e focadas em resultados.
-            Unimos tradição e inovação para entregar estratégia, eficiência e confidencialidade em cada caso.
+
+          <h2 class="fw-bold mb-3">Quem <span class="gold">somos?</span></h2>
+          <p class="text-secondary mb-4">
+            Somos a <strong>BSM Advogados</strong>, comprometidos com soluções jurídicas sólidas,
+            personalizadas e focadas em resultados. Unimos tradição e inovação para entregar
+            estratégia, eficiência e confidencialidade em cada caso.
           </p>
-        </div>
-      </div>
-      <div class="divider my-5"></div>
-    </div>
-  </section>
 
-  <!-- =========================================
-     PREMIAÇÕES / MÉTRICAS — NOVO DESIGN
-     ========================================= -->
-<section id="premios" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-5">Nossas <span class="gold">conquistas</span></h2>
-    <div class="row g-4 justify-content-center">
-      
-      <!-- Card 1 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="metric-card">
-          <i class="bi bi-award-fill"></i>
-          <h5>+10 anos</h5>
-          <p>de experiência jurídica</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="metric-card">
-          <i class="bi bi-people-fill"></i>
-          <h5>+1000 clientes</h5>
-          <p>atendidos por ano</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="metric-card">
-          <i class="bi bi-trophy-fill"></i>
-          <h5>Top Firms</h5>
-          <p>Reconhecido no setor</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-md-3 col-sm-6">
-        <div class="metric-card">
-          <i class="bi bi-star-fill"></i>
-          <h5>98%</h5>
-          <p>de causas bem-sucedidas</p>
+          <a href="#contato" class="btn btn-gold px-4">
+            Fale Conosco
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
+<div class="section-divider"></div>
+
+  <!-- =========================================
+     PREMIAÇÕES / MÉTRICAS — NOVO DESIGN
+     ========================================= -->
+<section id="premios" class="ach-bsm py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-white mb-2">Nossas <span class="gold">conquistas</span></h2>
+      <p class="text-secondary m-0">Performance comprovada, consistência e confiança.</p>
+    </div>
+
+    <div class="ach-grid">
+      <!-- 10+ anos -->
+      <article class="ach-card">
+        <div class="icon-ring"><i class="bi bi-award"></i></div>
+        <div class="stat">
+          <span class="num counter" data-target="10">0</span><span class="plus">+</span>
+        </div>
+        <h5 class="label">anos de experiência</h5>
+        <p class="desc">Atuação sólida e estratégica em múltiplas frentes do Direito.</p>
+      </article>
+
+      <!-- +1000 clientes -->
+      <article class="ach-card">
+        <div class="icon-ring"><i class="bi bi-people"></i></div>
+        <div class="stat">
+          <span class="num counter" data-target="1000">0</span><span class="plus">+</span>
+        </div>
+        <h5 class="label">clientes/ano</h5>
+        <p class="desc">Atendimento humanizado com escala e qualidade.</p>
+      </article>
+
+      <!-- SLA / tempo médio -->
+      <article class="ach-card">
+        <div class="icon-ring"><i class="bi bi-stopwatch"></i></div>
+        <div class="stat small">
+          <span class="num counter" data-target="24">0</span><span class="plus">h</span>
+        </div>
+        <h5 class="label">tempo médio de retorno</h5>
+        <p class="desc">Priorizamos respostas ágeis e objetivas.</p>
+      </article>
+
+      <!-- NPS / satisfação -->
+      <article class="ach-card">
+        <div class="icon-ring"><i class="bi bi-emoji-smile"></i></div>
+        <div class="stat small">
+          <span class="num counter" data-target="92">0</span><span class="plus">/100</span>
+        </div>
+        <h5 class="label">satisfação dos clientes</h5>
+        <p class="desc">Parcerias de longo prazo baseadas em confiança.</p>
+      </article>
+    </div>
+
+    <!-- faixa-resumo -->
+    <div class="ach-strip mt-4">
+      <span><i class="bi bi-patch-check-fill me-2"></i>Excelência reconhecida</span>
+      <span><i class="bi bi-shield-lock-fill mx-2"></i>Ética & confidencialidade</span>
+      <span><i class="bi bi-trophy-fill mx-2"></i>Atuação estratégica</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
 
  <!-- =========================================
      NOSSA EQUIPE — CARROSSEL PROFISSIONAL

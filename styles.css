@@ -439,3 +439,77 @@ footer{ background:#0a0a0a; border-top:1px solid var(--border); }
 
 /* ========== 11) Utilidades pontuais ========== */
 .text-white-80{ color:rgba(255,255,255,.8); }  /* (reaproveitado em equipe e contato) */
+
+/* ============================
+   FOOTER — BSM (mesmo fundo do Áreas de Atuação)
+   ============================ */
+.footer-bsm{
+  background: #0b0b0b; /* igual ao .areas-v3 */
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 24px;
+  color: #cfd3d7;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.footer-logo{
+  max-width: 160px;
+  height: auto;
+  display:block;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 6px 18px rgba(212,175,55,.12));
+}
+
+.footer-text{ margin: 0 0 14px; color:#aeb5bc; }
+
+.footer-title{
+  color:#fff; letter-spacing:.2px; text-transform:uppercase;
+  font-weight:700; margin-bottom:14px; font-size:.95rem;
+}
+
+.footer-links{ list-style:none; padding:0; margin:0; }
+.footer-links li{ margin:8px 0; }
+.footer-links a{
+  color:#cfd3d7; text-decoration:none;
+  transition: color .2s ease, transform .2s ease;
+}
+.footer-links a:hover{ color:var(--gold,#d4af37); transform: translateX(2px); }
+
+.footer-contact{ list-style:none; padding:0; margin:0; }
+.footer-contact li{
+  display:flex; gap:10px; align-items:flex-start;
+  margin:10px 0; color:#cfd3d7;
+}
+.footer-contact i{
+  color: var(--gold,#d4af37);
+  margin-top: 2px;
+}
+
+.footer-social{ display:flex; gap:10px; }
+.footer-social a{
+  width:36px; height:36px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  color:#e9e9e9; font-size:18px; text-decoration:none;
+  transition: .25s ease;
+}
+.footer-social a:hover{
+  background: var(--gold,#d4af37); color:#000;
+  transform: translateY(-2px);
+}
+
+.footer-bottom{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; margin-top:36px; padding-top:18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color:#aeb5bc; font-size:.95rem;
+}
+.footer-bottom .credit a{
+  color: var(--gold,#d4af37); text-decoration:none; font-weight:700;
+}
+.footer-bottom .credit a:hover{ text-decoration:underline; }
+
+@media (max-width: 767.98px){
+  .footer-bottom{ flex-direction:column; text-align:center; }
+}

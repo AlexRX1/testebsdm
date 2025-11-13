@@ -170,7 +170,20 @@ footer{ background:#0a0a0a; border-top:1px solid var(--border); }
 
 @media (max-width: 991.98px){
   .collage{ min-height:0; }
-  .pic{ position:relative; width:100%; height:220px; margin-bottom:14px; left:auto; right:auto; top:auto; bottom:auto; }
+
+  /* Só a primeira imagem aparece no responsivo */
+  .pic-3{
+    position:relative;
+    width:100%;
+    height:220px;
+    margin-bottom:14px;
+    left:auto; right:auto; top:auto; bottom:auto;
+  }
+
+  .pic-1,
+  .pic-2{
+    display:none;
+  }
 }
 @media (max-width: 575.98px){
   .kpi .num{ font-size:64px; }
@@ -269,6 +282,25 @@ footer{ background:#0a0a0a; border-top:1px solid var(--border); }
 @media (max-width: 991.98px){ .lawyer-photo{ max-height:420px; } .team-pro .display-5{ font-size:2rem; } }
 @media (max-width: 575.98px){ .lawyer-photo{ max-height:360px; } }
 
+/* Mantém a altura dos slides da equipe constante */
+.team-pro #carouselEquipePro .carousel-item{
+  min-height: 520px;          /* ajusta se quiser mais/menos espaço */
+  display: flex;
+  align-items: center;
+}
+
+/* Garante que o container acompanhe o flex */
+.team-pro #carouselEquipePro .carousel-item > .container{
+  width: 100%;
+}
+
+/* No mobile pode aliviar um pouco a altura mínima */
+@media (max-width: 767.98px){
+  .team-pro #carouselEquipePro .carousel-item{
+    min-height: 0;
+    align-items: flex-start;
+  }
+}
 
 /* ========== 07) Áreas de atuação ========== */
 .areas-v3{ background:#0b0b0b; }
@@ -513,3 +545,4 @@ footer{ background:#0a0a0a; border-top:1px solid var(--border); }
 @media (max-width: 767.98px){
   .footer-bottom{ flex-direction:column; text-align:center; }
 }
+

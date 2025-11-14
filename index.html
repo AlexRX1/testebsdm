@@ -12,6 +12,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Nosso CSS separado -->
   <link href="styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/LOGOBSM.png">
+
 </head>
 
 <body>
@@ -76,7 +78,7 @@
     </div>
   </header>
 
-  <section id="quem-somos" class="sobre-alt py-5">
+  <section id="quem-somos" class="sobre-alt py-5 reveal ">
     <div class="container">
       <div class="row align-items-center g-5">
         <!-- Colagem de imagens -->
@@ -121,7 +123,7 @@
   <!-- =========================================
      PREMIAÇÕES / MÉTRICAS — NOVO DESIGN
      ========================================= -->
-  <section id="premios" class="ach-bsm py-5">
+  <section id="premios" class="ach-bsm py-5 reveal">
     <div class="container">
       <div class="text-center mb-4">
         <h2 class="fw-bold text-white mb-2">Nossas <span class="gold">conquistas</span></h2>
@@ -174,7 +176,7 @@
   <!-- =========================================
      NOSSA EQUIPE — CARROSSEL PROFISSIONAL
      ========================================= -->
-  <section id="equipe" class="team-pro py-5">
+  <section id="equipe" class="team-pro py-5 reveal ">
     <div class="container text-center mb-5">
       <h2 class="fw-bold mb-2">Nossa <span class="gold">Equipe</span></h2>
       <p class="text-secondary m-0">Profissionais de alta performance, foco em resultados.</p>
@@ -442,7 +444,7 @@
   <!-- =========================================
        ÁREAS DE ATUAÇÃO
        ========================================= -->
-  <section id="areas" class="areas-v3 py-5">
+  <section id="areas" class="areas-v3 py-5 reveal ">
     <div class="container">
       <div class="text-center mb-4">
         <h2 class="fw-bold mb-2">Áreas de <span class="gold">atuação</span></h2>
@@ -451,7 +453,7 @@
 
       <div class="areas-grid">
         <!-- Previdenciário -->
-        <a href="#" class="area-card"
+        <a href="previdenciario.html" class="area-card"
           style="--bg:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1600&auto=format&fit=crop');">
           <div class="area-ink"></div>
           <div class="area-content">
@@ -462,7 +464,7 @@
         </a>
 
         <!-- Cível -->
-        <a href="#" class="area-card" style="--bg:url('img/direitocivil.png');">
+        <a href="civel.html" class="area-card" style="--bg:url('img/direitocivil.png');">
           <div class="area-ink"></div>
           <div class="area-content">
             <div class="area-icon"><i class="bi bi-people"></i></div>
@@ -472,7 +474,7 @@
         </a>
 
         <!-- Trabalhista -->
-        <a href="#" class="area-card" style="--bg:url('img/direito_trabalho.jpg');">
+        <a href="trabalhista.html" class="area-card" style="--bg:url('img/direito_trabalho.jpg');">
           <div class="area-ink"></div>
           <div class="area-content">
             <div class="area-icon"><i class="bi bi-briefcase"></i></div>
@@ -482,7 +484,7 @@
         </a>
 
         <!-- Bancário – RMC / RCC -->
-        <a href="#" class="area-card"
+        <a href="bancario.html" class="area-card"
           style="--bg:url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1600&auto=format&fit=crop');">
           <div class="area-ink"></div>
           <div class="area-content">
@@ -492,8 +494,8 @@
           </div>
         </a>
 
-        <!-- Família -->
-        <a href="#" class="area-card" style="--bg:url('img/advogado-da-familia-.png');">
+        <!-- Famífamilialia -->
+        <a href="familia.html" class="area-card" style="--bg:url('img/advogado-da-familia-.png');">
           <div class="area-ink"></div>
           <div class="area-content">
             <div class="area-icon"><i class="bi bi-heart"></i></div>
@@ -502,7 +504,7 @@
           </div>
         </a>
         <!-- Cartório -->
-        <a href="#" class="area-card"
+        <a href="cartorio.html" class="area-card"
           style="--bg:url('https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?q=80&w=1600&auto=format&fit=crop');">
           <div class="area-ink"></div>
           <div class="area-content">
@@ -516,7 +518,7 @@
   </section>
   <div class="section-divider"></div>
 
-  <section id="contato" class="contact-cta">
+  <section id="contato" class="contact-cta reveal ">
     <div class="container">
       <div class="row g-5 align-items-start">
 
@@ -942,6 +944,33 @@ ${msg}`;
       });
     })();
   </script>
+  <script>
+  // Animações de surgimento (reveal)
+  (function () {
+    const items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+
+    // fallback se o browser não tiver IntersectionObserver
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target); // anima só uma vez
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    items.forEach(el => observer.observe(el));
+  })();
+</script>
+
 
 </body>
 

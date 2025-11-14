@@ -452,7 +452,11 @@ footer {
 @media (max-width: 575.98px) {
   .lawyer-photo { max-height: 360px; }
 }
-
+@media (max-width: 767.98px) {
+  .expertise {
+    display: none !important;
+  }
+}
 /* =========================================================
    SEÇÃO ÁREAS DE ATUAÇÃO
    ========================================================= */
@@ -953,4 +957,368 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* ============================
+   ESPECIALIDADE – HERO
+   ============================ */
+.spec-hero{
+  position: relative;
+  padding: 160px 0 80px;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.spec-hero-previdenciario{
+  background: url("img/previdenciario-bg.jpg") center center/cover no-repeat, #000;
+}
+
+.spec-hero-overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(120deg, rgba(0,0,0,.75), rgba(0,0,0,.55));
+  z-index:0;
+}
+
+.spec-hero .container{
+  position:relative;
+  z-index:1;
+}
+
+.spec-pill{
+  display:inline-block;
+  padding:4px 12px;
+  border-radius:999px;
+  border:1px solid rgba(212,175,55,.7);
+  color:#f7e7b1;
+  font-size:.8rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:10px;
+}
+
+.spec-title{
+  font-weight:800;
+  letter-spacing:-.5px;
+  font-size:clamp(32px,4vw,46px);
+  margin-bottom:12px;
+}
+
+.spec-sub{
+  color:#e2e2e2;
+  font-size:1.05rem;
+  max-width:620px;
+}
+
+.spec-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+
+.spec-tags span{
+  font-size:.9rem;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.45);
+}
+
+/* ============================
+   ESPECIALIDADE – LINHA DO TEMPO
+   ============================ */
+.spec-timeline-section{
+  background:#000;
+  color:#fff;
+  padding:72px 0;
+}
+
+.spec-timeline{
+  position:relative;
+  padding-left:32px;
+}
+
+.spec-timeline::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(180deg, rgba(212,175,55,.0), rgba(212,175,55,.8), rgba(212,175,55,.0));
+}
+
+.spec-timeline-item{
+  position:relative;
+  margin-bottom:26px;
+}
+
+.spec-timeline-icon{
+  position:absolute;
+  left:-2px;
+  top:4px;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#000;
+  font-size:11px;
+  box-shadow:0 0 12px rgba(212,175,55,.6);
+}
+
+.spec-timeline-content{
+  padding:6px 0 4px 18px;
+}
+
+.spec-timeline-content h5{
+  font-size:1.05rem;
+  margin-bottom:4px;
+}
+
+.spec-timeline-content p{
+  margin:0;
+  color:#d4d4d4;
+  font-size:.95rem;
+  text-align:justify;
+}
+
+/* Box lateral com lista de serviços */
+.spec-box{
+  background:rgba(255,255,255,.03);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  padding:22px 20px;
+  box-shadow:0 12px 28px rgba(0,0,0,.4);
+}
+
+.spec-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 14px;
+  color:#d5d5d5;
+  font-size:.95rem;
+}
+
+.spec-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:6px;
+  margin-bottom:8px;
+}
+
+.spec-list i{
+  color:var(--gold);
+  margin-top:3px;
+}
+
+.spec-box-note{
+  border-top:1px solid rgba(255,255,255,.09);
+  padding-top:10px;
+  font-size:.88rem;
+  color:#c6c6c6;
+}
+
+/* ============================
+   ESPECIALIDADE – EQUIPE
+   ============================ */
+.spec-team-section{
+  background:#000;
+  padding:72px 0 96px;
+}
+
+.spec-lawyer-card{
+  background:rgba(255,255,255,.03);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.08);
+  padding:18px 18px 20px;
+  box-shadow:0 12px 28px rgba(0,0,0,.45);
+  height:100%;
+}
+
+.spec-lawyer-photo-wrap{
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.spec-lawyer-photo{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+.spec-lawyer-oab{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,.78);
+  color:#f5f2e2;
+  font-size:.78rem;
+  padding:5px 10px;
+  border-radius:999px 999px 0 0;
+  border:1px solid rgba(212,175,55,.7);
+}
+
+.spec-lawyer-role{
+  font-size:.9rem;
+  color:#bfbfbf;
+}
+
+.spec-lawyer-text{
+  font-size:.94rem;
+  color:#d5d5d5;
+  text-align:justify;
+}
+
+/* responsivo */
+@media (max-width: 767.98px){
+  .spec-hero{
+    padding-top:130px;
+    padding-bottom:60px;
+  }
+
+  .spec-timeline{
+    padding-left:26px;
+  }
+
+  .spec-lawyer-photo{
+    height:260px;
+  }
+}
+/* ===== ESPECIALIDADES – HERO GENÉRICO ===== */
+.spec-hero{
+  position: relative;
+  padding: 140px 0 80px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.spec-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(212,175,55,.25) 0, transparent 40%),
+              linear-gradient(120deg, rgba(0,0,0,.85), rgba(0,0,0,.65));
+  z-index: 0;
+}
+
+.spec-hero .container{ position: relative; z-index: 1; }
+
+.spec-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:.8rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(212,175,55,.6);
+  color:#f7e8b4;
+  margin-bottom:14px;
+}
+
+.spec-title{
+  font-weight:800;
+  font-size:clamp(30px,4.2vw,46px);
+  letter-spacing:-.03em;
+  margin-bottom:10px;
+}
+
+.spec-sub{
+  max-width:540px;
+  color:rgba(255,255,255,.85);
+  font-size:1rem;
+  margin-bottom:18px;
+}
+
+.spec-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:10px;
+}
+.spec-tags span{
+  font-size:.9rem;
+  border-radius:999px;
+  padding:6px 12px;
+  background:rgba(0,0,0,.65);
+  border:1px solid rgba(212,175,55,.45);
+  color:#f3e2a2;
+}
+
+/* ===== HERO ESPECÍFICO – PREVIDENCIÁRIO ===== */
+/* mesma imagem do card: https://images.unsplash.com/photo-1589829545856-d10d557cf95f... */
+.spec-hero-previdenciario{
+  background:
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1600&auto=format&fit=crop")
+    center center / cover no-repeat fixed;
+}
+
+/* Cível – usa img/direitocivil.png */
+.spec-hero-civel{
+  background:
+    url("img/direitocivil.png")
+    center center / cover no-repeat fixed;
+}
+
+/* Trabalhista – usa img/direito_trabalho.jpg */
+.spec-hero-trabalhista{
+  background:
+    url("img/direito_trabalho.jpg")
+    center center / cover no-repeat fixed;
+}
+
+/* Bancário — mesma do card */
+.spec-hero-bancario{
+  background:
+    url("https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1600&auto=format&fit=crop")
+    center center / cover no-repeat fixed;
+}
+
+/* Família – mesma imagem do card */
+.spec-hero-familia{
+  background:
+    url("img/advogado-da-familia-.png")
+    center center / cover no-repeat fixed;
+}
+
+/* Cartório – mesma imagem do card */
+.spec-hero-cartorio{
+  background:
+    url("https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?q=80&w=1600&auto=format&fit=crop")
+    center center / cover no-repeat fixed;
+}
+
+/* =========================
+   ANIMAÇÕES SUAVES (reveal)
+   ========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+/* quando aparece na tela */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* pequenos delays opcionais */
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.45s;
 }
